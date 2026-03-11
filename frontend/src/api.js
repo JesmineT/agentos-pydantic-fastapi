@@ -70,3 +70,40 @@ export async function getMCPTools() {
 export async function healthCheck() {
   return request('/health')
 }
+
+
+export async function sendMessageStream({ message, userId, conversationId, onToken, onDone }) {
+  const response = await fetch('/api/chat/stream', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      message,
+      user_id: userId,
+      conversation_id: conversationId,
+    }),
+  })
+
+  const reader = response.body.getReader()
+  const decoder = new TextDecoder()
+
+  while (true) {
+    const { done, value } = await reader.read()
+    if (done) break
+
+    // Parse SSE chunks
+    const chunk = decoder.decode(value)
+    const lines = chunk.split('\n').filter(line => line.startsWith('data: '))
+
+    for (const line of lines) {
+      try {
+        const data = JSON.parse(line.replace('data: ', ''))
+        if (data.error) {
+          onDone({ error: data.error })
+          return
+        }
+        if (data.token) onToken(data.token)   // Send each token to UI
+        if (data.done) onDone({ fullResponse: data.full_response })
+      } catch { /* skip malformed chunks */ }
+    }
+  }
+}

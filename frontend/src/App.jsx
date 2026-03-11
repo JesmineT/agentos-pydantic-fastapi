@@ -14,7 +14,7 @@
 // ─────────────────────────────────────────────────────────────
 
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { sendMessage, getTraces, getState, updateState, getMCPTools, healthCheck } from './api'
+import { sendMessage, sendMessageStream, getTraces, getState, updateState, getMCPTools, healthCheck } from './api'
 
 // Generate stable IDs for this browser session
 const SESSION_USER_ID = `user-${Math.random().toString(36).slice(2, 9)}`
@@ -127,28 +127,44 @@ export default function App() {
       await sleep(300)
       setLoadingStep('AI Model: Generating response...')
 
-      const result = await sendMessage({
+      // Add empty placeholder bubble — tokens will fill it in real time
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: '',
+        tools_used: [],
+        streaming: true,
+      }])
+
+      await sendMessageStream({
         message: userText,
         userId: SESSION_USER_ID,
         conversationId: SESSION_CONV_ID,
+        onToken: (token) => {
+          // Append each token to the last message bubble as it arrives
+          setMessages(prev => {
+            const updated = [...prev]
+            const last = updated[updated.length - 1]
+            updated[updated.length - 1] = {
+              ...last,
+              content: last.content + token,
+            }
+            return updated
+          })
+        },
+        onDone: ({ fullResponse, error }) => {
+          setMessages(prev => {
+            const updated = [...prev]
+            updated[updated.length - 1] = {
+              ...updated[updated.length - 1],
+              content: fullResponse || error || 'Something went wrong',
+              streaming: false,
+            }
+            return updated
+          })
+          // Refresh traces after streaming completes
+          getTraces(20).then(({ traces: newTraces }) => setTraces(newTraces)).catch(() => {})
+        }
       })
-
-      setMessages(prev => [...prev, {
-        role: 'assistant',
-        content: result.answer,
-        tools_used: result.tools_used,
-        follow_up_suggestions: result.follow_up_suggestions,
-        trace_id: result.trace_id,
-      }])
-
-      // Update session state from backend response
-      if (result.session_state) setSessionState(result.session_state)
-
-      // Refresh traces
-      try {
-        const { traces: newTraces } = await getTraces(20)
-        setTraces(newTraces)
-      } catch { /* non-critical */ }
 
     } catch (err) {
       const msg = err.message?.includes('fetch')
@@ -494,7 +510,10 @@ function MessageBubble({ msg, mode }) {
           border: isUser ? 'none' : '1px solid #1e1e2e',
           color: msg.error ? '#f87171' : isUser ? '#fff' : '#e8e8f0',
           whiteSpace: 'pre-wrap',
-        }}>{msg.content}</div>
+        }}>
+          {msg.content}
+          {msg.streaming && <span style={{ animation: 'pulse 1s infinite' }}>▋</span>}
+        </div>
 
         {msg.follow_up_suggestions?.length > 0 && (
           <div style={{ marginTop: 8, display: 'flex', flexWrap: 'wrap', gap: 5 }}>

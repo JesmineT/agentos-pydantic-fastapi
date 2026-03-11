@@ -36,6 +36,13 @@ from agent import run_agent
 from observability import get_recent_traces
 from tools import ALL_MCP_SERVERS
 
+import logfire
+
+from fastapi.responses import StreamingResponse
+import json
+
+from cache import get_session_state, save_session_state, get_recent_messages, save_recent_messages
+
 load_dotenv()
 
 
@@ -185,7 +192,76 @@ async def chat(request: ChatRequest, db: AsyncSession = Depends(get_db)):
         session_state=result["session_state"],
     )
 
+@app.post("/api/chat/stream")
+async def chat_stream(request: ChatRequest):
+    """
+    Streaming chat endpoint.
+    Sends the LLM response token-by-token using Server-Sent Events (SSE).
+    """
+    user_id = request.user_id or f"user-{uuid.uuid4().hex[:8]}"
+    conversation_id = request.conversation_id or f"conv-{uuid.uuid4().hex[:8]}"
 
+    session_state = await get_session_state(user_id)
+    history = await get_recent_messages(conversation_id)
+
+    history_text = ""
+    for msg in history[-10:]:
+        role = "User" if msg["role"] == "user" else "Assistant"
+        history_text += f"{role}: {msg['content']}\n"
+
+    full_message = request.message
+    if history_text:
+        full_message = f"Previous conversation:\n{history_text}\nUser: {request.message}"
+
+    async def generate():
+        with logfire.span('streaming chat', message=request.message):
+            full_response = ""
+            try:
+                from openai import AsyncOpenAI
+                client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+                stream = await client.chat.completions.create(
+                    model="gpt-4o",
+                    messages=[
+                        {
+                            "role": "system",
+                            "content": "You are AgentOS — a helpful AI assistant. Be clear, concise, and helpful."
+                        },
+                        {
+                            "role": "user",
+                            "content": full_message
+                        }
+                    ],
+                    stream=True,
+                )
+
+                async for chunk in stream:
+                    token = chunk.choices[0].delta.content
+                    if token:
+                        full_response += token
+                        yield f"data: {json.dumps({'token': token, 'done': False})}\n\n"
+
+                yield f"data: {json.dumps({'token': '', 'done': True, 'full_response': full_response})}\n\n"
+
+                history.append({"role": "user", "content": request.message})
+                history.append({"role": "assistant", "content": full_response})
+                await save_recent_messages(conversation_id, history)
+                session_state["total_interactions"] = session_state.get("total_interactions", 0) + 1
+                await save_session_state(user_id, session_state)
+
+            except Exception as e:
+                yield f"data: {json.dumps({'error': str(e), 'done': True})}\n\n"
+
+    # StreamingResponse is OUTSIDE generate() — this is the fix
+    return StreamingResponse(
+        generate(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no",
+        }
+    )
 @app.get("/api/traces")
 async def get_traces(limit: int = 20):
     """
