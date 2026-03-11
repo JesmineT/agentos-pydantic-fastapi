@@ -1,0 +1,393 @@
+2026-03-09 21:29:57,380 [INFO] agentOS.observability: [trace-2bd9bb34] New trace started | conversation=string
+2026-03-09 21:29:57,381 [INFO] agentOS.observability: [trace-2bd9bb34] Step started: PydanticAI: Loading context & state
+2026-03-09 21:29:57,382 [INFO] agentOS.observability: [trace-2bd9bb34] Step started: AI Model: Generating response
+2026-03-09 21:30:01,670 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:30:01,743 [INFO] agentOS.observability: [trace-2bd9bb34] TRACE COMPLETE | status=error | total_ms=4364 | steps=2 | tools=[]
+2026-03-09 21:31:23,585 [INFO] agentOS.observability: [trace-be4c0b57] New trace started | conversation=string
+2026-03-09 21:31:23,586 [INFO] agentOS.observability: [trace-be4c0b57] Step started: PydanticAI: Loading context & state
+2026-03-09 21:31:23,586 [INFO] agentOS.observability: [trace-be4c0b57] Step started: AI Model: Generating response
+2026-03-09 21:31:28,092 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:31:28,118 [INFO] agentOS.observability: [trace-be4c0b57] Step started: Redis: Saving session state
+2026-03-09 21:31:28,127 [INFO] agentOS.observability: [trace-be4c0b57] TRACE COMPLETE | status=success | total_ms=4543 | steps=3 | tools=[]
+2026-03-09 21:31:49,811 [INFO] agentOS.observability: [trace-a9c2f133] New trace started | conversation=string
+2026-03-09 21:31:49,811 [INFO] agentOS.observability: [trace-a9c2f133] Step started: PydanticAI: Loading context & state
+2026-03-09 21:31:49,811 [INFO] agentOS.observability: [trace-a9c2f133] Step started: AI Model: Generating response
+2026-03-09 21:31:50,813 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:31:50,817 [INFO] agentOS.observability: [trace-a9c2f133] Step started: Tool: calculator('2+2')
+2026-03-09 21:31:50,818 [INFO] agentOS.observability: [trace-a9c2f133] Tool called: calculator | inputs={'expression': '2+2'}
+2026-03-09 21:31:52,576 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:31:52,579 [INFO] agentOS.observability: [trace-a9c2f133] Step started: Redis: Saving session state
+2026-03-09 21:31:52,582 [INFO] agentOS.observability: [trace-a9c2f133] TRACE COMPLETE | status=success | total_ms=2772 | steps=4 | tools=['calculator']
+2026-03-09 21:45:47,919 [INFO] agentOS.observability: [trace-1f4ecc88] New trace started | conversation=conv-r3xwmw0
+2026-03-09 21:45:47,920 [INFO] agentOS.observability: [trace-1f4ecc88] Step started: PydanticAI: Loading context & state
+2026-03-09 21:45:47,920 [INFO] agentOS.observability: [trace-1f4ecc88] Step started: AI Model: Generating response
+2026-03-09 21:45:50,049 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:45:50,084 [INFO] agentOS.observability: [trace-1f4ecc88] Step started: Redis: Saving session state
+2026-03-09 21:45:50,088 [INFO] agentOS.observability: [trace-1f4ecc88] TRACE COMPLETE | status=success | total_ms=2169 | steps=3 | tools=[]
+2026-03-09 21:45:56,865 [INFO] agentOS.observability: [trace-96e6f0e7] New trace started | conversation=conv-r3xwmw0
+2026-03-09 21:45:56,865 [INFO] agentOS.observability: [trace-96e6f0e7] Step started: PydanticAI: Loading context & state
+2026-03-09 21:45:56,867 [INFO] agentOS.observability: [trace-96e6f0e7] Step started: AI Model: Generating response
+2026-03-09 21:45:57,944 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:45:57,948 [INFO] agentOS.observability: [trace-96e6f0e7] Step started: Tool: get_datetime()
+2026-03-09 21:45:57,948 [INFO] agentOS.observability: [trace-96e6f0e7] Tool called: get_datetime | inputs={}
+2026-03-09 21:46:00,018 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:46:00,020 [INFO] agentOS.observability: [trace-96e6f0e7] Step started: Tool: web_search('current weather March 9 2026')
+2026-03-09 21:46:00,896 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=current+weather+March+9+2026&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:46:00,897 [INFO] agentOS.observability: [trace-96e6f0e7] Tool called: web_search | inputs={'query': 'current weather March 9 2026'}
+2026-03-09 21:46:02,148 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:46:02,151 [INFO] agentOS.observability: [trace-96e6f0e7] Step started: Tool: web_search('current weather March 9 2026 N')
+2026-03-09 21:46:02,956 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=current+weather+March+9+2026+New+York&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:46:02,957 [INFO] agentOS.observability: [trace-96e6f0e7] Tool called: web_search | inputs={'query': 'current weather March 9 2026 New York'}
+2026-03-09 21:46:04,107 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:46:04,109 [INFO] agentOS.observability: [trace-96e6f0e7] Step started: Redis: Saving session state
+2026-03-09 21:46:04,114 [INFO] agentOS.observability: [trace-96e6f0e7] TRACE COMPLETE | status=success | total_ms=7249 | steps=6 | tools=['get_datetime', 'web_search', 'web_search']
+2026-03-09 21:46:18,202 [INFO] agentOS.observability: [trace-cbc11c7c] New trace started | conversation=conv-r3xwmw0
+2026-03-09 21:46:18,202 [INFO] agentOS.observability: [trace-cbc11c7c] Step started: PydanticAI: Loading context & state
+2026-03-09 21:46:18,203 [INFO] agentOS.observability: [trace-cbc11c7c] Step started: AI Model: Generating response
+2026-03-09 21:46:19,406 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:46:19,409 [INFO] agentOS.observability: [trace-cbc11c7c] Step started: Tool: web_search('Brunei travel guide')
+2026-03-09 21:46:19,757 [INFO] agentOS.observability: [trace-cbc11c7c] Step started: Tool: calculator('6 * 66')
+2026-03-09 21:46:19,758 [INFO] agentOS.observability: [trace-cbc11c7c] Tool called: calculator | inputs={'expression': '6 * 66'}
+2026-03-09 21:46:20,186 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=Brunei+travel+guide&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:46:20,188 [INFO] agentOS.observability: [trace-cbc11c7c] Tool called: web_search | inputs={'query': 'Brunei travel guide'}
+2026-03-09 21:46:23,256 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:46:23,259 [INFO] agentOS.observability: [trace-cbc11c7c] Step started: Redis: Saving session state
+2026-03-09 21:46:23,263 [INFO] agentOS.observability: [trace-cbc11c7c] TRACE COMPLETE | status=success | total_ms=5061 | steps=5 | tools=['calculator', 'web_search']
+2026-03-09 21:46:43,477 [INFO] agentOS.observability: [trace-15fa42ab] New trace started | conversation=conv-r3xwmw0
+2026-03-09 21:46:43,477 [INFO] agentOS.observability: [trace-15fa42ab] Step started: PydanticAI: Loading context & state
+2026-03-09 21:46:43,477 [INFO] agentOS.observability: [trace-15fa42ab] Step started: AI Model: Generating response
+2026-03-09 21:46:45,206 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:46:45,209 [INFO] agentOS.observability: [trace-15fa42ab] Step started: Tool: web_search('current weather in Brunei')
+2026-03-09 21:46:45,926 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=current+weather+in+Brunei&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:46:45,927 [INFO] agentOS.observability: [trace-15fa42ab] Tool called: web_search | inputs={'query': 'current weather in Brunei'}
+2026-03-09 21:46:47,310 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:46:47,313 [INFO] agentOS.observability: [trace-15fa42ab] Step started: Tool: web_search('Brunei weather forecast Octobe')
+2026-03-09 21:46:48,048 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=Brunei+weather+forecast+October+2023&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:46:48,049 [INFO] agentOS.observability: [trace-15fa42ab] Tool called: web_search | inputs={'query': 'Brunei weather forecast October 2023'}
+2026-03-09 21:46:51,426 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:46:51,431 [INFO] agentOS.observability: [trace-15fa42ab] Step started: Redis: Saving session state
+2026-03-09 21:46:51,435 [INFO] agentOS.observability: [trace-15fa42ab] TRACE COMPLETE | status=success | total_ms=7958 | steps=5 | tools=['web_search', 'web_search']
+2026-03-09 21:47:26,324 [INFO] agentOS.observability: [trace-833f2937] New trace started | conversation=conv-r3xwmw0
+2026-03-09 21:47:26,325 [INFO] agentOS.observability: [trace-833f2937] Step started: PydanticAI: Loading context & state
+2026-03-09 21:47:26,325 [INFO] agentOS.observability: [trace-833f2937] Step started: AI Model: Generating response
+2026-03-09 21:47:27,344 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:47:27,346 [INFO] agentOS.observability: [trace-833f2937] Step started: Tool: get_datetime()
+2026-03-09 21:47:27,347 [INFO] agentOS.observability: [trace-833f2937] Tool called: get_datetime | inputs={}
+2026-03-09 21:47:30,815 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:47:30,817 [INFO] agentOS.observability: [trace-833f2937] Step started: Redis: Saving session state
+2026-03-09 21:47:30,821 [INFO] agentOS.observability: [trace-833f2937] TRACE COMPLETE | status=success | total_ms=4497 | steps=4 | tools=['get_datetime']
+2026-03-09 21:48:44,583 [INFO] agentOS.observability: [trace-001a93eb] New trace started | conversation=conv-r3xwmw0
+2026-03-09 21:48:44,584 [INFO] agentOS.observability: [trace-001a93eb] Step started: PydanticAI: Loading context & state
+2026-03-09 21:48:44,584 [INFO] agentOS.observability: [trace-001a93eb] Step started: AI Model: Generating response
+2026-03-09 21:48:45,485 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:48:45,488 [INFO] agentOS.observability: [trace-001a93eb] Step started: Tool: web_search('current weather in Kuching Mal')
+2026-03-09 21:48:46,319 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=current+weather+in+Kuching+Malaysia&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:48:46,320 [INFO] agentOS.observability: [trace-001a93eb] Tool called: web_search | inputs={'query': 'current weather in Kuching Malaysia'}
+2026-03-09 21:48:47,114 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:48:47,116 [INFO] agentOS.observability: [trace-001a93eb] Step started: Tool: web_search('current weather Kuching Malays')
+2026-03-09 21:48:47,854 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=current+weather+Kuching+Malaysia+October+2023&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:48:47,856 [INFO] agentOS.observability: [trace-001a93eb] Tool called: web_search | inputs={'query': 'current weather Kuching Malaysia October 2023'}
+2026-03-09 21:48:50,016 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:48:50,018 [INFO] agentOS.observability: [trace-001a93eb] Step started: Redis: Saving session state
+2026-03-09 21:48:50,021 [INFO] agentOS.observability: [trace-001a93eb] TRACE COMPLETE | status=success | total_ms=5438 | steps=5 | tools=['web_search', 'web_search']
+2026-03-09 21:50:17,094 [INFO] agentOS.observability: [trace-f3d8d04a] New trace started | conversation=conv-r3xwmw0
+2026-03-09 21:50:17,095 [INFO] agentOS.observability: [trace-f3d8d04a] Step started: PydanticAI: Loading context & state
+2026-03-09 21:50:17,095 [INFO] agentOS.observability: [trace-f3d8d04a] Step started: AI Model: Generating response
+2026-03-09 21:50:18,335 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:50:18,338 [INFO] agentOS.observability: [trace-f3d8d04a] Step started: Tool: web_search('current US iron industry news')
+2026-03-09 21:50:19,127 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=current+US+iron+industry+news&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:50:19,128 [INFO] agentOS.observability: [trace-f3d8d04a] Tool called: web_search | inputs={'query': 'current US iron industry news'}
+2026-03-09 21:50:22,246 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:50:22,249 [INFO] agentOS.observability: [trace-f3d8d04a] Step started: Redis: Saving session state
+2026-03-09 21:50:22,253 [INFO] agentOS.observability: [trace-f3d8d04a] TRACE COMPLETE | status=success | total_ms=5158 | steps=4 | tools=['web_search']
+2026-03-09 21:50:29,129 [INFO] agentOS.observability: [trace-60b5b475] New trace started | conversation=conv-r3xwmw0
+2026-03-09 21:50:29,129 [INFO] agentOS.observability: [trace-60b5b475] Step started: PydanticAI: Loading context & state
+2026-03-09 21:50:29,130 [INFO] agentOS.observability: [trace-60b5b475] Step started: AI Model: Generating response
+2026-03-09 21:50:30,017 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:50:30,020 [INFO] agentOS.observability: [trace-60b5b475] Step started: Tool: web_search('Iran news')
+2026-03-09 21:50:30,723 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=Iran+news&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:50:30,725 [INFO] agentOS.observability: [trace-60b5b475] Tool called: web_search | inputs={'query': 'Iran news'}
+2026-03-09 21:50:32,686 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:50:32,688 [INFO] agentOS.observability: [trace-60b5b475] Step started: Redis: Saving session state
+2026-03-09 21:50:32,692 [INFO] agentOS.observability: [trace-60b5b475] TRACE COMPLETE | status=success | total_ms=3563 | steps=4 | tools=['web_search']
+2026-03-09 21:50:41,285 [INFO] agentOS.observability: [trace-0b8ddced] New trace started | conversation=conv-r3xwmw0
+2026-03-09 21:50:41,286 [INFO] agentOS.observability: [trace-0b8ddced] Step started: PydanticAI: Loading context & state
+2026-03-09 21:50:41,286 [INFO] agentOS.observability: [trace-0b8ddced] Step started: AI Model: Generating response
+2026-03-09 21:50:42,644 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:50:42,647 [INFO] agentOS.observability: [trace-0b8ddced] Step started: Tool: web_search('US relations with Iran October')
+2026-03-09 21:50:43,481 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=US+relations+with+Iran+October+2023&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:50:43,483 [INFO] agentOS.observability: [trace-0b8ddced] Tool called: web_search | inputs={'query': 'US relations with Iran October 2023'}
+2026-03-09 21:50:44,563 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:50:44,569 [INFO] agentOS.observability: [trace-0b8ddced] Step started: Tool: web_search('US Iran news October 2023')
+2026-03-09 21:50:45,303 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=US+Iran+news+October+2023&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:50:45,303 [INFO] agentOS.observability: [trace-0b8ddced] Tool called: web_search | inputs={'query': 'US Iran news October 2023'}
+2026-03-09 21:50:46,165 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:50:46,166 [INFO] agentOS.observability: [trace-0b8ddced] Step started: Tool: web_search('US Iran current events')
+2026-03-09 21:50:46,744 [INFO] httpx: HTTP Request: GET https://api.duckduckgo.com/?q=US+Iran+current+events&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 202 Accepted"
+2026-03-09 21:50:46,745 [INFO] agentOS.observability: [trace-0b8ddced] Tool called: web_search | inputs={'query': 'US Iran current events'}
+2026-03-09 21:50:50,314 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 21:50:50,317 [INFO] agentOS.observability: [trace-0b8ddced] Step started: Redis: Saving session state
+2026-03-09 21:50:50,321 [INFO] agentOS.observability: [trace-0b8ddced] TRACE COMPLETE | status=success | total_ms=9036 | steps=6 | tools=['web_search', 'web_search', 'web_search']
+2026-03-09 22:03:23,748 [INFO] agentOS.observability: [trace-1da3c254] New trace started | conversation=conv-9oad2rm
+2026-03-09 22:03:23,750 [INFO] agentOS.observability: [trace-1da3c254] Step started: PydanticAI: Loading context & state
+2026-03-09 22:03:23,750 [INFO] agentOS.observability: [trace-1da3c254] Step started: AI Model: Generating response
+2026-03-09 22:03:25,499 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:03:25,541 [INFO] agentOS.observability: [trace-1da3c254] Step started: Tool: get_datetime()
+2026-03-09 22:03:25,542 [INFO] agentOS.observability: [trace-1da3c254] Tool called: get_datetime | inputs={}
+2026-03-09 22:03:26,357 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:03:26,362 [INFO] agentOS.observability: [trace-1da3c254] Step started: Tool: web_search('current weather report')
+2026-03-09 22:03:27,220 [INFO] primp: response: https://www.bing.com/search?q=current+weather+report 200
+2026-03-09 22:03:27,322 [INFO] agentOS.observability: [trace-1da3c254] Tool called: web_search | inputs={'query': 'current weather report'}
+2026-03-09 22:03:28,417 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:03:28,419 [INFO] agentOS.observability: [trace-1da3c254] Step started: Tool: web_search('current weather on March 9, 20')
+2026-03-09 22:03:28,783 [INFO] primp: response: https://www.bing.com/search?q=current+weather+on+March+9%2C+2026 200
+2026-03-09 22:03:28,888 [INFO] agentOS.observability: [trace-1da3c254] Tool called: web_search | inputs={'query': 'current weather on March 9, 2026'}
+2026-03-09 22:03:30,738 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:03:30,740 [INFO] agentOS.observability: [trace-1da3c254] Step started: Tool: web_search('current weather today March 9,')
+2026-03-09 22:03:31,073 [INFO] primp: response: https://www.bing.com/search?q=current+weather+today+March+9%2C+2026 200
+2026-03-09 22:03:31,187 [INFO] agentOS.observability: [trace-1da3c254] Tool called: web_search | inputs={'query': 'current weather today March 9, 2026'}
+2026-03-09 22:03:32,774 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:03:32,783 [INFO] agentOS.observability: [trace-1da3c254] Step started: Redis: Saving session state
+2026-03-09 22:03:32,788 [INFO] agentOS.observability: [trace-1da3c254] TRACE COMPLETE | status=success | total_ms=9039 | steps=7 | tools=['get_datetime', 'web_search', 'web_search', 'web_search']
+2026-03-09 22:03:38,798 [INFO] agentOS.observability: [trace-bc1bf843] New trace started | conversation=conv-9oad2rm
+2026-03-09 22:03:38,798 [INFO] agentOS.observability: [trace-bc1bf843] Step started: PydanticAI: Loading context & state
+2026-03-09 22:03:38,799 [INFO] agentOS.observability: [trace-bc1bf843] Step started: AI Model: Generating response
+2026-03-09 22:03:40,047 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:03:40,049 [INFO] agentOS.observability: [trace-bc1bf843] Step started: Tool: web_search('current weather in Brunei')
+2026-03-09 22:03:40,516 [INFO] primp: response: https://www.bing.com/search?q=current+weather+in+Brunei 200
+2026-03-09 22:03:40,600 [INFO] agentOS.observability: [trace-bc1bf843] Tool called: web_search | inputs={'query': 'current weather in Brunei'}
+2026-03-09 22:03:41,586 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:03:41,588 [INFO] agentOS.observability: [trace-bc1bf843] Step started: Tool: web_search('current weather in Brunei')
+2026-03-09 22:03:41,909 [INFO] primp: response: https://www.bing.com/search?q=current+weather+in+Brunei 200
+2026-03-09 22:03:42,055 [INFO] agentOS.observability: [trace-bc1bf843] Tool called: web_search | inputs={'query': 'current weather in Brunei'}
+2026-03-09 22:03:43,847 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:03:43,850 [INFO] agentOS.observability: [trace-bc1bf843] Step started: Redis: Saving session state
+2026-03-09 22:03:43,854 [INFO] agentOS.observability: [trace-bc1bf843] TRACE COMPLETE | status=success | total_ms=5056 | steps=5 | tools=['web_search', 'web_search']
+2026-03-09 22:04:06,105 [INFO] agentOS.observability: [trace-78a953e3] New trace started | conversation=conv-9oad2rm
+2026-03-09 22:04:06,105 [INFO] agentOS.observability: [trace-78a953e3] Step started: PydanticAI: Loading context & state
+2026-03-09 22:04:06,105 [INFO] agentOS.observability: [trace-78a953e3] Step started: AI Model: Generating response
+2026-03-09 22:04:07,401 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:04:07,404 [INFO] agentOS.observability: [trace-78a953e3] Step started: Tool: web_search('current weather in Brunei')
+2026-03-09 22:04:07,728 [INFO] primp: response: https://www.bing.com/search?q=current+weather+in+Brunei 200
+2026-03-09 22:04:07,836 [INFO] agentOS.observability: [trace-78a953e3] Tool called: web_search | inputs={'query': 'current weather in Brunei'}
+2026-03-09 22:04:10,486 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:04:10,529 [INFO] agentOS.observability: [trace-78a953e3] Step started: Redis: Saving session state
+2026-03-09 22:04:10,533 [INFO] agentOS.observability: [trace-78a953e3] TRACE COMPLETE | status=success | total_ms=4428 | steps=4 | tools=['web_search']
+2026-03-09 22:04:16,369 [INFO] agentOS.observability: [trace-49e7c34e] New trace started | conversation=conv-9oad2rm
+2026-03-09 22:04:16,369 [INFO] agentOS.observability: [trace-49e7c34e] Step started: PydanticAI: Loading context & state
+2026-03-09 22:04:16,369 [INFO] agentOS.observability: [trace-49e7c34e] Step started: AI Model: Generating response
+2026-03-09 22:04:17,419 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:04:17,423 [INFO] agentOS.observability: [trace-49e7c34e] Step started: Redis: Saving session state
+2026-03-09 22:04:17,426 [INFO] agentOS.observability: [trace-49e7c34e] TRACE COMPLETE | status=success | total_ms=1057 | steps=3 | tools=[]
+2026-03-09 22:31:47,760 [INFO] agentOS.observability: [trace-c7d06a92] New trace started | conversation=conv-9nodcqw
+2026-03-09 22:31:47,761 [INFO] agentOS.observability: [trace-c7d06a92] Step started: PydanticAI: Loading context & state
+2026-03-09 22:31:47,761 [INFO] agentOS.observability: [trace-c7d06a92] Step started: AI Model: Generating response
+2026-03-09 22:31:48,662 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:31:50,530 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:50,572 [INFO] agentOS.observability: [trace-c7d06a92] Step started: Tool: web_search('logfire definition')
+2026-03-09 22:31:50,930 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:31:51,085 [INFO] primp: response: https://www.bing.com/search?q=logfire+definition 200
+2026-03-09 22:31:52,774 [INFO] primp: response: https://www.bing.com/search?q=logfire+definition&first=11&FORM=PERE 200
+2026-03-09 22:31:52,889 [INFO] agentOS.observability: [trace-c7d06a92] Tool called: web_search | inputs={'query': 'logfire definition'}
+2026-03-09 22:31:53,198 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:31:54,198 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:54,204 [INFO] agentOS.observability: [trace-c7d06a92] Step started: Tool: web_search('Logfire software')
+2026-03-09 22:31:54,533 [INFO] primp: response: https://www.bing.com/search?q=Logfire+software 200
+2026-03-09 22:31:54,628 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:31:54,669 [INFO] agentOS.observability: [trace-c7d06a92] Tool called: web_search | inputs={'query': 'Logfire software'}
+2026-03-09 22:31:55,438 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:31:55,928 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:55,933 [INFO] agentOS.observability: [trace-c7d06a92] Step started: Tool: web_search('Logfire Oracle')
+2026-03-09 22:31:56,256 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:31:56,257 [INFO] primp: response: https://www.bing.com/search?q=Logfire+Oracle 200
+2026-03-09 22:31:56,365 [INFO] agentOS.observability: [trace-c7d06a92] Tool called: web_search | inputs={'query': 'Logfire Oracle'}
+2026-03-09 22:31:57,058 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:31:58,160 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:31:58,166 [INFO] agentOS.observability: [trace-c7d06a92] Step started: Tool: web_search('LogFire WMS software')
+2026-03-09 22:31:58,503 [INFO] primp: response: https://www.bing.com/search?q=LogFire+WMS+software 200
+2026-03-09 22:31:58,602 [INFO] agentOS.observability: [trace-c7d06a92] Tool called: web_search | inputs={'query': 'LogFire WMS software'}
+2026-03-09 22:31:58,888 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:31:59,737 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:00,678 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:32:00,684 [INFO] agentOS.observability: [trace-c7d06a92] Step started: Tool: web_search('LogFire WMS Oracle')
+2026-03-09 22:32:01,027 [INFO] primp: response: https://www.bing.com/search?q=LogFire+WMS+Oracle 200
+2026-03-09 22:32:01,039 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:01,100 [INFO] agentOS.observability: [trace-c7d06a92] Tool called: web_search | inputs={'query': 'LogFire WMS Oracle'}
+2026-03-09 22:32:01,851 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:01,978 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:32:01,985 [INFO] agentOS.observability: [trace-c7d06a92] Step started: Tool: web_search('LogFire Oracle Cloud')
+2026-03-09 22:32:02,362 [INFO] primp: response: https://www.bing.com/search?q=LogFire+Oracle+Cloud 200
+2026-03-09 22:32:02,429 [INFO] agentOS.observability: [trace-c7d06a92] Tool called: web_search | inputs={'query': 'LogFire Oracle Cloud'}
+2026-03-09 22:32:02,707 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:03,347 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:32:03,352 [INFO] agentOS.observability: [trace-c7d06a92] Step started: Tool: web_search('LogFire Oracle')
+2026-03-09 22:32:03,527 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:03,670 [INFO] primp: response: https://www.bing.com/search?q=LogFire+Oracle 200
+2026-03-09 22:32:03,752 [INFO] agentOS.observability: [trace-c7d06a92] Tool called: web_search | inputs={'query': 'LogFire Oracle'}
+2026-03-09 22:32:04,347 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:05,437 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:32:05,444 [INFO] agentOS.observability: [trace-c7d06a92] Step started: Tool: web_search('LogFire Oracle Cloud migration')
+2026-03-09 22:32:05,769 [INFO] primp: response: https://www.bing.com/search?q=LogFire+Oracle+Cloud+migration 200
+2026-03-09 22:32:05,891 [INFO] agentOS.observability: [trace-c7d06a92] Tool called: web_search | inputs={'query': 'LogFire Oracle Cloud migration'}
+2026-03-09 22:32:06,227 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:07,027 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:07,117 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:32:07,123 [INFO] agentOS.observability: [trace-c7d06a92] Step started: Tool: web_search('Oracle LogFire WMS')
+2026-03-09 22:32:07,386 [INFO] primp: response: https://www.bing.com/search?q=Oracle+LogFire+WMS 200
+2026-03-09 22:32:07,550 [INFO] agentOS.observability: [trace-c7d06a92] Tool called: web_search | inputs={'query': 'Oracle LogFire WMS'}
+2026-03-09 22:32:07,888 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:08,578 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:32:08,583 [INFO] agentOS.observability: [trace-c7d06a92] Step started: Tool: web_search('LogFire Oracle Cloud WMS')
+2026-03-09 22:32:08,696 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:08,957 [INFO] primp: response: https://www.bing.com/search?q=LogFire+Oracle+Cloud+WMS 200
+2026-03-09 22:32:09,063 [INFO] agentOS.observability: [trace-c7d06a92] Tool called: web_search | inputs={'query': 'LogFire Oracle Cloud WMS'}
+2026-03-09 22:32:09,507 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:11,548 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-09 22:32:11,556 [INFO] agentOS.observability: [trace-c7d06a92] Step started: Redis: Saving session state
+2026-03-09 22:32:11,565 [INFO] agentOS.observability: [trace-c7d06a92] TRACE COMPLETE | status=success | total_ms=23805 | steps=13 | tools=['web_search', 'web_search', 'web_search', 'web_search', 'web_search', 'web_search', 'web_search', 'web_search', 'web_search', 'web_search']
+2026-03-09 22:32:12,366 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-09 22:32:29,838 [ERROR] opentelemetry.exporter.otlp.proto.http.metric_exporter: Failed to export metrics batch code: 401, reason: Unknown token
+2026-03-11 15:04:14,678 [INFO] agentOS.observability: [trace-663d7df0] New trace started | conversation=conv-6g1o1ry
+2026-03-11 15:04:14,679 [INFO] agentOS.observability: [trace-663d7df0] Step started: PydanticAI: Loading context & state
+2026-03-11 15:04:14,679 [INFO] agentOS.observability: [trace-663d7df0] Step started: AI Model: Generating response
+2026-03-11 15:04:15,737 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:04:18,353 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:04:18,394 [INFO] agentOS.observability: [trace-663d7df0] Step started: Redis: Saving session state
+2026-03-11 15:04:18,398 [INFO] agentOS.observability: [trace-663d7df0] TRACE COMPLETE | status=success | total_ms=3720 | steps=3 | tools=[]
+2026-03-11 15:04:18,741 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:04:22,073 [ERROR] opentelemetry.exporter.otlp.proto.http.metric_exporter: Failed to export metrics batch code: 401, reason: Unknown token
+2026-03-11 15:04:23,173 [INFO] agentOS.observability: [trace-b4317d74] New trace started | conversation=conv-6g1o1ry
+2026-03-11 15:04:23,174 [INFO] agentOS.observability: [trace-b4317d74] Step started: PydanticAI: Loading context & state
+2026-03-11 15:04:23,174 [INFO] agentOS.observability: [trace-b4317d74] Step started: AI Model: Generating response
+2026-03-11 15:04:23,483 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:04:23,891 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:04:25,672 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:04:25,681 [INFO] agentOS.observability: [trace-b4317d74] Step started: Redis: Saving session state
+2026-03-11 15:04:25,686 [INFO] agentOS.observability: [trace-b4317d74] TRACE COMPLETE | status=success | total_ms=2513 | steps=3 | tools=[]
+2026-03-11 15:04:26,035 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:04:30,446 [INFO] agentOS.observability: [trace-22bd48b7] New trace started | conversation=conv-6g1o1ry
+2026-03-11 15:04:30,447 [INFO] agentOS.observability: [trace-22bd48b7] Step started: PydanticAI: Loading context & state
+2026-03-11 15:04:30,447 [INFO] agentOS.observability: [trace-22bd48b7] Step started: AI Model: Generating response
+2026-03-11 15:04:30,772 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:04:32,282 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:04:32,287 [INFO] agentOS.observability: [trace-22bd48b7] Step started: Redis: Saving session state
+2026-03-11 15:04:32,291 [INFO] agentOS.observability: [trace-22bd48b7] TRACE COMPLETE | status=success | total_ms=1846 | steps=3 | tools=[]
+2026-03-11 15:04:32,645 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:05:22,446 [ERROR] opentelemetry.exporter.otlp.proto.http.metric_exporter: Failed to export metrics batch code: 401, reason: Unknown token
+2026-03-11 15:07:14,557 [INFO] agentOS.observability: [trace-0afc3bf1] New trace started | conversation=conv-1iodwkh
+2026-03-11 15:07:18,661 [INFO] agentOS.observability: [trace-0afc3bf1] Step started: PydanticAI: Loading context & state
+2026-03-11 15:07:18,662 [INFO] agentOS.observability: [trace-0afc3bf1] Step started: AI Model: Generating response
+2026-03-11 15:07:20,475 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:07:20,907 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:07:22,329 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:07:22,383 [INFO] agentOS.observability: [trace-0afc3bf1] Step started: Tool: web_search('current weather in Osaka')
+2026-03-11 15:07:23,028 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:07:35,818 [INFO] primp: response: https://www.bing.com/search?q=current+weather+in+Osaka 200
+2026-03-11 15:07:35,943 [INFO] agentOS.observability: [trace-0afc3bf1] Tool called: web_search | inputs={'query': 'current weather in Osaka'}
+2026-03-11 15:07:36,288 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:07:38,911 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:07:39,045 [INFO] agentOS.observability: [trace-0afc3bf1] Step started: Redis: Saving session state
+2026-03-11 15:07:39,050 [INFO] agentOS.observability: [trace-0afc3bf1] TRACE COMPLETE | status=success | total_ms=24493 | steps=4 | tools=['web_search']
+2026-03-11 15:07:39,371 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:07:40,177 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:07:56,422 [INFO] agentOS.observability: [trace-0140cf0a] New trace started | conversation=conv-1iodwkh
+2026-03-11 15:07:56,422 [INFO] agentOS.observability: [trace-0140cf0a] Step started: PydanticAI: Loading context & state
+2026-03-11 15:07:56,422 [INFO] agentOS.observability: [trace-0140cf0a] Step started: AI Model: Generating response
+2026-03-11 15:07:56,819 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:07:57,708 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:07:57,716 [INFO] agentOS.observability: [trace-0140cf0a] Step started: Tool: calculator('1+1')
+2026-03-11 15:07:57,717 [INFO] agentOS.observability: [trace-0140cf0a] Tool called: calculator | inputs={'expression': '1+1'}
+2026-03-11 15:07:58,147 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:08:00,679 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:08:00,685 [INFO] agentOS.observability: [trace-0140cf0a] Step started: Redis: Saving session state
+2026-03-11 15:08:00,690 [INFO] agentOS.observability: [trace-0140cf0a] TRACE COMPLETE | status=success | total_ms=4269 | steps=4 | tools=['calculator']
+2026-03-11 15:08:01,087 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:08:17,810 [ERROR] opentelemetry.exporter.otlp.proto.http.metric_exporter: Failed to export metrics batch code: 401, reason: Unknown token
+2026-03-11 15:08:34,027 [INFO] agentOS.observability: [trace-5406fe35] New trace started | conversation=conv-1iodwkh
+2026-03-11 15:08:34,027 [INFO] agentOS.observability: [trace-5406fe35] Step started: PydanticAI: Loading context & state
+2026-03-11 15:08:34,027 [INFO] agentOS.observability: [trace-5406fe35] Step started: AI Model: Generating response
+2026-03-11 15:08:34,647 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:08:35,566 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:08:35,574 [INFO] agentOS.observability: [trace-5406fe35] Step started: Tool: get_datetime()
+2026-03-11 15:08:35,575 [INFO] agentOS.observability: [trace-5406fe35] Tool called: get_datetime | inputs={}
+2026-03-11 15:08:36,065 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:08:37,965 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:08:37,985 [INFO] agentOS.observability: [trace-5406fe35] Step started: Redis: Saving session state
+2026-03-11 15:08:37,989 [INFO] agentOS.observability: [trace-5406fe35] TRACE COMPLETE | status=success | total_ms=3962 | steps=4 | tools=['get_datetime']
+2026-03-11 15:08:38,449 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:08:55,164 [INFO] agentOS.observability: [trace-005840dc] New trace started | conversation=conv-1iodwkh
+2026-03-11 15:08:55,165 [INFO] agentOS.observability: [trace-005840dc] Step started: PydanticAI: Loading context & state
+2026-03-11 15:08:55,165 [INFO] agentOS.observability: [trace-005840dc] Step started: AI Model: Generating response
+2026-03-11 15:08:55,642 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:08:56,798 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:08:56,808 [INFO] agentOS.observability: [trace-005840dc] Step started: Redis: Saving session state
+2026-03-11 15:08:56,814 [INFO] agentOS.observability: [trace-005840dc] TRACE COMPLETE | status=success | total_ms=1650 | steps=3 | tools=[]
+2026-03-11 15:08:57,505 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:09:10,825 [INFO] agentOS.observability: [trace-fd648739] New trace started | conversation=conv-1iodwkh
+2026-03-11 15:09:10,826 [INFO] agentOS.observability: [trace-fd648739] Step started: PydanticAI: Loading context & state
+2026-03-11 15:09:10,826 [INFO] agentOS.observability: [trace-fd648739] Step started: AI Model: Generating response
+2026-03-11 15:09:11,582 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:09:12,009 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:09:12,015 [INFO] agentOS.observability: [trace-fd648739] Step started: Tool: web_search('Toji Fushiguro')
+2026-03-11 15:09:12,417 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:09:12,522 [INFO] primp: response: https://www.bing.com/search?q=Toji+Fushiguro 200
+2026-03-11 15:09:12,783 [INFO] agentOS.observability: [trace-fd648739] Tool called: web_search | inputs={'query': 'Toji Fushiguro'}
+2026-03-11 15:09:13,217 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:09:15,928 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:09:15,936 [INFO] agentOS.observability: [trace-fd648739] Step started: Redis: Saving session state
+2026-03-11 15:09:15,941 [INFO] agentOS.observability: [trace-fd648739] TRACE COMPLETE | status=success | total_ms=5116 | steps=4 | tools=['web_search']
+2026-03-11 15:09:16,547 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:09:18,175 [ERROR] opentelemetry.exporter.otlp.proto.http.metric_exporter: Failed to export metrics batch code: 401, reason: Unknown token
+2026-03-11 15:15:16,937 [INFO] agentOS.observability: [trace-d3b7a9d0] New trace started | conversation=conv-1iodwkh
+2026-03-11 15:15:16,938 [INFO] agentOS.observability: [trace-d3b7a9d0] Step started: PydanticAI: Loading context & state
+2026-03-11 15:15:16,939 [INFO] agentOS.observability: [trace-d3b7a9d0] Step started: AI Model: Generating response
+2026-03-11 15:15:17,967 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:15:20,526 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:15:20,585 [INFO] agentOS.observability: [trace-d3b7a9d0] Step started: Redis: Saving session state
+2026-03-11 15:15:20,593 [INFO] agentOS.observability: [trace-d3b7a9d0] TRACE COMPLETE | status=success | total_ms=3656 | steps=3 | tools=[]
+2026-03-11 15:15:20,899 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:15:21,330 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:15:56,414 [ERROR] opentelemetry.exporter.otlp.proto.http.metric_exporter: Failed to export metrics batch code: 401, reason: Unknown token
+2026-03-11 15:17:08,928 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:17:15,139 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:17:32,907 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:17:46,394 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:18:28,790 [INFO] agentOS.observability: [trace-474e024c] New trace started | conversation=conv-2bld4kp
+2026-03-11 15:18:28,791 [INFO] agentOS.observability: [trace-474e024c] Step started: PydanticAI: Loading context & state
+2026-03-11 15:18:28,791 [INFO] agentOS.observability: [trace-474e024c] Step started: AI Model: Generating response
+2026-03-11 15:18:29,901 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:18:31,807 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:18:31,850 [INFO] agentOS.observability: [trace-474e024c] Step started: Redis: Saving session state
+2026-03-11 15:18:31,856 [INFO] agentOS.observability: [trace-474e024c] TRACE COMPLETE | status=success | total_ms=3066 | steps=3 | tools=[]
+2026-03-11 15:18:32,155 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:18:38,123 [INFO] agentOS.observability: [trace-f484b3c7] New trace started | conversation=conv-2bld4kp
+2026-03-11 15:18:38,124 [INFO] agentOS.observability: [trace-f484b3c7] Step started: PydanticAI: Loading context & state
+2026-03-11 15:18:38,125 [INFO] agentOS.observability: [trace-f484b3c7] Step started: AI Model: Generating response
+2026-03-11 15:18:38,561 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:18:41,976 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:18:41,983 [INFO] agentOS.observability: [trace-f484b3c7] Step started: Redis: Saving session state
+2026-03-11 15:18:41,988 [INFO] agentOS.observability: [trace-f484b3c7] TRACE COMPLETE | status=success | total_ms=3865 | steps=3 | tools=[]
+2026-03-11 15:18:42,327 [ERROR] opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export span batch code: 401, reason: Unknown token
+2026-03-11 15:18:46,689 [ERROR] opentelemetry.exporter.otlp.proto.http.metric_exporter: Failed to export metrics batch code: 401, reason: Unknown token
+2026-03-11 15:20:59,903 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:21:07,187 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:21:15,614 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:21:21,513 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:21:38,991 [INFO] agentOS.observability: [trace-d1c7e1e0] New trace started | conversation=conv-7hqqa6y
+2026-03-11 15:21:38,992 [INFO] agentOS.observability: [trace-d1c7e1e0] Step started: PydanticAI: Loading context & state
+2026-03-11 15:21:38,992 [INFO] agentOS.observability: [trace-d1c7e1e0] Step started: AI Model: Generating response
+2026-03-11 15:21:42,136 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:21:42,184 [INFO] agentOS.observability: [trace-d1c7e1e0] Step started: Redis: Saving session state
+2026-03-11 15:21:42,189 [INFO] agentOS.observability: [trace-d1c7e1e0] TRACE COMPLETE | status=success | total_ms=3198 | steps=3 | tools=[]
+2026-03-11 15:23:57,630 [INFO] agentOS.observability: [trace-12883517] New trace started | conversation=conv-7hqqa6y
+2026-03-11 15:23:57,632 [INFO] agentOS.observability: [trace-12883517] Step started: PydanticAI: Loading context & state
+2026-03-11 15:23:57,633 [INFO] agentOS.observability: [trace-12883517] Step started: AI Model: Generating response
+2026-03-11 15:24:01,353 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:24:01,362 [INFO] agentOS.observability: [trace-12883517] Step started: Redis: Saving session state
+2026-03-11 15:24:01,370 [INFO] agentOS.observability: [trace-12883517] TRACE COMPLETE | status=success | total_ms=3740 | steps=3 | tools=[]
+2026-03-11 15:24:05,175 [INFO] agentOS.observability: [trace-56d544dc] New trace started | conversation=conv-7hqqa6y
+2026-03-11 15:24:05,176 [INFO] agentOS.observability: [trace-56d544dc] Step started: PydanticAI: Loading context & state
+2026-03-11 15:24:05,176 [INFO] agentOS.observability: [trace-56d544dc] Step started: AI Model: Generating response
+2026-03-11 15:24:07,153 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:24:07,166 [INFO] agentOS.observability: [trace-56d544dc] Step started: Redis: Saving session state
+2026-03-11 15:24:07,172 [INFO] agentOS.observability: [trace-56d544dc] TRACE COMPLETE | status=success | total_ms=1997 | steps=3 | tools=[]
