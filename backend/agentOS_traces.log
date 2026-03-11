@@ -391,3 +391,60 @@
 2026-03-11 15:24:07,153 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2026-03-11 15:24:07,166 [INFO] agentOS.observability: [trace-56d544dc] Step started: Redis: Saving session state
 2026-03-11 15:24:07,172 [INFO] agentOS.observability: [trace-56d544dc] TRACE COMPLETE | status=success | total_ms=1997 | steps=3 | tools=[]
+2026-03-11 15:53:44,101 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:53:59,659 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:54:05,145 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:56:14,193 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:56:33,998 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:56:37,648 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:58:11,178 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:58:15,166 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:58:33,301 [INFO] agentOS.observability: Logfire connected
+2026-03-11 15:58:35,113 [INFO] agentOS.observability: [trace-5644cfbf] New trace started | conversation=conv-tb09opd
+2026-03-11 15:58:35,113 [INFO] agentOS.observability: [trace-5644cfbf] Step started: PydanticAI: Loading context & state
+2026-03-11 15:58:35,113 [INFO] agentOS.observability: [trace-5644cfbf] Step started: AI Model: Generating response
+2026-03-11 15:58:38,556 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:58:38,595 [INFO] agentOS.observability: [trace-5644cfbf] Step started: Redis: Saving session state
+2026-03-11 15:58:38,601 [INFO] agentOS.observability: [trace-5644cfbf] TRACE COMPLETE | status=success | total_ms=3488 | steps=3 | tools=[]
+2026-03-11 16:15:48,435 [INFO] agentOS.observability: [trace-57401755] New trace started | conversation=conv-tb09opd
+2026-03-11 16:15:48,447 [INFO] agentOS.observability: [trace-57401755] Step started: PydanticAI: Loading context & state
+2026-03-11 16:15:48,448 [INFO] agentOS.observability: [trace-57401755] Step started: AI Model: Generating response
+2026-03-11 16:15:50,520 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:15:50,576 [INFO] agentOS.observability: [trace-57401755] Step started: Redis: Saving session state
+2026-03-11 16:15:50,586 [INFO] agentOS.observability: [trace-57401755] TRACE COMPLETE | status=success | total_ms=2152 | steps=3 | tools=[]
+2026-03-11 16:28:41,256 [INFO] agentOS.observability: [trace-12c016a0] New trace started | conversation=conv-tb09opd
+2026-03-11 16:28:41,268 [INFO] agentOS.observability: [trace-12c016a0] Step started: PydanticAI: Loading context & state
+2026-03-11 16:28:41,269 [INFO] agentOS.observability: [trace-12c016a0] Step started: AI Model: Generating response
+2026-03-11 16:28:44,309 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:28:44,344 [INFO] agentOS.observability: [trace-12c016a0] Step started: Redis: Saving session state
+2026-03-11 16:28:44,352 [INFO] agentOS.observability: [trace-12c016a0] TRACE COMPLETE | status=success | total_ms=3097 | steps=3 | tools=[]
+2026-03-11 16:28:49,600 [INFO] agentOS.observability: [trace-a72230cf] New trace started | conversation=conv-tb09opd
+2026-03-11 16:28:49,601 [INFO] agentOS.observability: [trace-a72230cf] Step started: PydanticAI: Loading context & state
+2026-03-11 16:28:49,601 [INFO] agentOS.observability: [trace-a72230cf] Step started: AI Model: Generating response
+2026-03-11 16:28:52,364 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:28:52,375 [INFO] agentOS.observability: [trace-a72230cf] Step started: Redis: Saving session state
+2026-03-11 16:28:52,380 [INFO] agentOS.observability: [trace-a72230cf] TRACE COMPLETE | status=success | total_ms=2780 | steps=3 | tools=[]
+2026-03-11 16:46:59,148 [INFO] agentOS.observability: Logfire connected
+2026-03-11 16:47:20,918 [INFO] agentOS.observability: Logfire connected
+2026-03-11 16:47:36,459 [INFO] agentOS.observability: Logfire connected
+2026-03-11 16:52:46,559 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:52:53,653 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:53:00,775 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:53:06,462 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:54:19,375 [INFO] agentOS.observability: Logfire connected
+2026-03-11 16:54:38,643 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:55:59,434 [INFO] agentOS.observability: [trace-9914fa65] New trace started | conversation=string
+2026-03-11 16:55:59,435 [INFO] agentOS.observability: [trace-9914fa65] Step started: PydanticAI: Loading context & state
+2026-03-11 16:55:59,435 [INFO] agentOS.observability: [trace-9914fa65] Step started: AI Model: Generating response
+2026-03-11 16:56:02,483 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:56:02,522 [INFO] agentOS.observability: [trace-9914fa65] Step started: Redis: Saving session state
+2026-03-11 16:56:02,526 [INFO] agentOS.observability: [trace-9914fa65] TRACE COMPLETE | status=success | total_ms=3092 | steps=3 | tools=[]
+2026-03-11 16:56:05,868 [INFO] agentOS.observability: [trace-48d49cc9] New trace started | conversation=string
+2026-03-11 16:56:05,869 [INFO] agentOS.observability: [trace-48d49cc9] Step started: PydanticAI: Loading context & state
+2026-03-11 16:56:05,870 [INFO] agentOS.observability: [trace-48d49cc9] Step started: AI Model: Generating response
+2026-03-11 16:56:07,921 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:56:07,925 [INFO] agentOS.observability: [trace-48d49cc9] Step started: Redis: Saving session state
+2026-03-11 16:56:07,929 [INFO] agentOS.observability: [trace-48d49cc9] TRACE COMPLETE | status=success | total_ms=2061 | steps=3 | tools=[]
+2026-03-11 16:56:36,746 [INFO] agentOS.observability: Logfire connected
+2026-03-11 16:57:05,610 [INFO] agentOS.observability: Logfire connected
+2026-03-11 16:57:13,360 [INFO] agentOS.observability: Logfire connected
