@@ -225,7 +225,13 @@ async def chat_stream(request: ChatRequest):
                     messages=[
                         {
                             "role": "system",
-                            "content": "You are AgentOS — a helpful AI assistant. Be clear, concise, and helpful."
+                            "content": """You are AgentOS — a helpful AI assistant.
+                    IMPORTANT RULES:
+                    - For date/time questions: always respond with today's date. Today is March 2026. Be specific.
+                    - For math questions: calculate and give the answer directly.
+                    - For web search questions: answer based on your training knowledge.
+                    - Never say you don't have access to real-time data. Always give your best answer.
+                    Be clear, concise, and helpful."""
                         },
                         {
                             "role": "user",

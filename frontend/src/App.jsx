@@ -49,7 +49,7 @@ export default function App() {
     initApp()
     setMessages([{
       role: 'assistant',
-      content: "Hello! I'm AgentOS — powered by PydanticAI, FastAPI, and a real AI model. I can search the web, do calculations, check the time, and more. What would you like help with?",
+      content: "Hello! I'm AgentOS, powered by PydanticAI, FastAPI, and a real AI model. I can search the web, do calculations, check the time, and more. What would you like help with?",
       tools_used: [],
     }])
   }, [])

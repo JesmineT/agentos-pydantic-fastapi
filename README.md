@@ -122,10 +122,10 @@ Enable full Logfire: add `LOGFIRE_TOKEN` to `.env` and uncomment the Logfire lin
 
 ## Why These Choices?
 
-**PydanticAI over LangChain** — cleaner API, better type safety, easier to debug, no magic chains.
+**PydanticAI over LangChain** - cleaner API, better type safety, easier to debug, no magic chains.
 
-**FastAPI over Flask** — async by default, automatic OpenAPI docs, Pydantic built-in.
+**FastAPI over Flask** - async by default, automatic OpenAPI docs, Pydantic built-in.
 
-**Redis + PostgreSQL** — Redis for fast session reads (<1ms), PostgreSQL for durable long-term storage.
+**Redis + PostgreSQL** - Redis for fast session reads (<1ms), PostgreSQL for durable long-term storage.
 
-**vLLM as alternative** — privacy (data stays local), cost savings at scale, fastest open-source inference engine.
+**vLLM as alternative** - privacy (data stays local), cost savings at scale, fastest open-source inference engine.
